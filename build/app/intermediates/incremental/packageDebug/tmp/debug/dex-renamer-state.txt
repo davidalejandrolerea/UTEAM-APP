@@ -1,0 +1,4 @@
+#Thu Jul 28 15:14:26 ART 2022
+base.0=/Users/mac-david/app_uteam/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
