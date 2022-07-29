@@ -1,0 +1,109 @@
+service: aws-lambda-prueba
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource:
+        - arn:aws:dynamodb:us-east-1:503235614140:table/TaskTable2
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource:
+        - arn:aws:dynamodb:us-east-1:503235614140:table/UserTable
+functions:
+  hello:
+    handler: src/hello.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
+  createTask:
+    handler: src/addTask.addTask
+    events:
+      - httpApi:
+          path: /tasks
+          method: post
+  getTasks:
+    handler: src/getTasks.getTasks
+    events:
+      - httpApi:
+          path: /tasks
+          method: get
+  getTask:
+    handler: src/getTask.getTask
+    events:
+      - httpApi:
+          path: /tasks/{id} 
+          method: get        
+  updateTask:
+     handler: src/updateTask.updateTask
+     events:
+       - httpApi:
+           path: /tasks/{id}
+           method: put 
+  deleteTask:
+     handler: src/deleteTask.deleteTask
+     events:
+       - httpApi:
+           path: /tasks/{id}
+           method: delete
+  createUser:
+    handler: src/addUser.addUser
+    events:
+      - httpApi:
+          path: /users
+          method: post  
+  getUsers:
+    handler: src/getUsers.getUsers
+    events:
+      - httpApi:
+          path: /users
+          method: get
+  getUser:
+    handler: src/getUsers.getUser
+    events:
+      - httpApi:
+          path: /users/{id} 
+          method: get        
+  updateUser:
+     handler: src/updateUser.updateUser
+     events:
+       - httpApi:
+           path: /users/{id}
+           method: put 
+  deleteUser:
+     handler: src/deleteUser.deleteUser
+     events:
+       - httpApi:
+           path: /users/{id}
+           method: delete                    
+resources:
+  Resources:
+    TaskTable2:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: TaskTable2
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH   
+    UserTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: UserTable
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH   
