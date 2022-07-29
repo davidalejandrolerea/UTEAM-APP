@@ -19,8 +19,8 @@ class User {
   }
 
   Map<String, dynamic> toMap() => {
-        "Nombre": title,
-        "Email": description,
+        "Nombre": Nombre,
+        "Email": Email,
         "id": id,
       };
 

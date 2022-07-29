@@ -1,12 +1,12 @@
 import 'package:app_uteam/models/tasks.dart';
 import 'package:flutter/material.dart';
 
-class UserFormProvider extends ChangeNotifier {
+class TaskFormProvider extends ChangeNotifier {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  User user;
+  Task task;
 
-  UserFormProvider(this.user);
+  TaskFormProvider(this.task);
 
   bool isValidForm() {
     return formKey.currentState?.validate() ?? false;

@@ -1,4 +1,5 @@
 import 'package:app_uteam/providers/task_list_provider.dart';
+import 'package:app_uteam/providers/user_list_provider.dart';
 import 'package:app_uteam/router/app_routes.dart';
 import 'package:app_uteam/services/task_services.dart';
 import 'package:app_uteam/themes/app_theme.dart';
@@ -17,7 +18,8 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => TaskService()),
-        ChangeNotifierProvider(create: (_) => TaskListProvider())
+        ChangeNotifierProvider(create: (_) => TaskListProvider()),
+        ChangeNotifierProvider(create: (_) => UserListProvider())
       ],
       child: const MyApp(),
     );

@@ -1,17 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mac-david/UTEAM-APP/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/mac-david/UTEAM-APP/flutter-front/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/mac-david/UTEAM-APP/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/mac-david/UTEAM-APP/flutter-front/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
-                        "startOffsets": "176,832",
+                        "startOffsets": "173,818",
                         "endLines": "7,16",
                         "endColumns": "12,12",
-                        "endOffsets": "483,998"
+                        "endOffsets": "476,982"
                     },
                     "to": {
                         "startLines": "93,98",

@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 
 class UserScreen extends StatelessWidget {
   final options = const [
-    'Mariano Pivatto',
-    'Analia Soriano',
-    'Karen Godoy',
-    'Gaston Soriano',
-    'Walter Roldan',
+    'Aca van los usuarios',
   ];
   const UserScreen({Key? key}) : super(key: key);
 
@@ -28,26 +24,7 @@ class UserScreen extends StatelessWidget {
         separatorBuilder: (_, __) => const Divider(),
       ),
 
-      /*/ floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          FloatingActionButton(
-            backgroundColor: Colors.deepPurple,
-            child: const Icon(Icons.add),
-            onPressed: () {},
-          ),
-          FloatingActionButton(
-            backgroundColor: Colors.deepPurple,
-            child: const Icon(Icons.edit),
-            onPressed: () {},
-          ),
-          FloatingActionButton(
-            backgroundColor: Colors.deepPurple,
-            child: const Icon(Icons.delete_forever),
-            onPressed: () {},
-          )
-        ],
-      ),*/
+      
     );
   }
 }
