@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 
 class TaskService extends ChangeNotifier {
   final String _baseUrl = '2qufsr9dx5.execute-api.us-east-1.amazonaws.com';
-  final List<Task> tasks = [];
+  List<Task> tasks = [];
   late Task selectedTask;
   bool isLoading = true;
   bool isSaving = false;

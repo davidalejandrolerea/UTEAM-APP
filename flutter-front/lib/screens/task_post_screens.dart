@@ -93,6 +93,8 @@ class _TaskPostScreenState extends State<TaskPostScreen> {
             }
             taskServiceProvider.loadTasks();
             Navigator.of(context).pop();
+            taskServiceProvider.tasks = [];
+            taskServiceProvider.loadTasks();
           }),
     );
   }

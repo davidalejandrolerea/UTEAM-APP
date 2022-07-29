@@ -36,7 +36,7 @@ class _TaskPutScreenBody extends StatefulWidget {
 class _TaskPutScreenBodyState extends State<_TaskPutScreenBody> {
   @override
   Widget build(BuildContext context) {
-    final taskServiceProvider = Provider.of<TaskService>(context).loadTasks();
+    final taskServiceProvider = Provider.of<TaskService>(context);
 
     final taskForm = Provider.of<TaskFormProvider>(context);
     final task = taskForm.task;
@@ -100,6 +100,8 @@ class _TaskPutScreenBodyState extends State<_TaskPutScreenBody> {
                     onPressed: () async {
                       if (!taskForm.isValidForm()) return;
                       await widget.taskService.updateTask(taskForm.task);
+                      taskServiceProvider.tasks = [];
+                      taskServiceProvider.loadTasks();
                       Navigator.pushReplacementNamed(context, 'ManageTasks');
                     }),
                 FloatingActionButton(
@@ -113,6 +115,8 @@ class _TaskPutScreenBodyState extends State<_TaskPutScreenBody> {
                       if (!taskForm.isValidForm()) return;
                       await widget.taskService.deleteTask(taskForm.task);
                       // taskServiceProvider.loadTasks();
+                      taskServiceProvider.tasks = [];
+                      taskServiceProvider.loadTasks();
                       Navigator.of(context).pop();
                     }),
               ],
