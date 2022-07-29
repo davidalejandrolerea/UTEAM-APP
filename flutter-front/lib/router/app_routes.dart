@@ -19,6 +19,18 @@ class AppRoutes {
         name: 'Equipo UTEAM',
         screen: const TeamScreen()),
     
+    static final menuOptions = <MenuOption>[
+    MenuOption(
+        route: 'userScreen',
+        icon: Icons.user_outlined,
+        name: 'Usuarios',
+        screen: UserSreen()),
+    MenuOption(
+        route: 'team',
+        icon: Icons.groups_outlined,
+        name: 'Equipo UTEAM',
+        screen: const TeamScreen()),
+    
     MenuOption(
         route: 'register',
         icon: Icons.app_registration,
