@@ -30,7 +30,7 @@ class _Navegacion extends StatelessWidget {
           BottomNavigationBarItem(
               icon: Icon(Icons.mark_email_unread_outlined), label: 'Home'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.groups_outlined), label: 'Equipo'),
+              icon: Icon(Icons.groups_outlined), label: 'Usuarios'),
         ]);
   }
 }

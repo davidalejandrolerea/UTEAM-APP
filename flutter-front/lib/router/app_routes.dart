@@ -22,7 +22,7 @@ class AppRoutes {
     MenuOption(
         route: 'UserScreen',
         icon: Icons.supervised_user_circle_sharp,
-        name: 'User Sreen',
+        name: 'Userios UTEAM',
         screen: const UserScreen()),
     MenuOption(
         route: 'register',

@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
                 },
               )),
           separatorBuilder: (_, __) => const Divider(),
-          itemCount: 2),
+          itemCount: 3),
     );
   }
 }
