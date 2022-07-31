@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class UserScreen extends StatelessWidget {
   final options = const [
-    'Aca van los usuarios',
+    'Usuario 1',
+    'Usuario 2',
+    'Usuario 3'
   ];
   const UserScreen({Key? key}) : super(key: key);
 

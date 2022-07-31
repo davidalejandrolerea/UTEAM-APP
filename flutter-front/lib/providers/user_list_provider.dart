@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import '../models/user_model.dart';
 
 class UserListProvider extends ChangeNotifier {
-  List<UserModel> tasks = [];
-
+  List<UserModel> id = [];
+  List<UserModel> nombre = [];
+  List<UserModel> email = [];
   //set tasks(List<TaskModel> tasks) {}
 
 }

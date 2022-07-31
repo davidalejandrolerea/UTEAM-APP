@@ -38,8 +38,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "cross_file",
+      "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/cross_file-0.3.3+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "dio",
+      "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/dio-4.0.6",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -68,6 +80,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_icons",
+      "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_icons-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-2.0.1",
       "packageUri": "lib/",
@@ -80,8 +98,20 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/mac-david/flutter/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Users/mac-david/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -98,10 +128,46 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "image_picker",
+      "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.5+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "image_picker_android",
+      "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_android-0.8.5+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "image_picker_for_web",
+      "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_for_web-2.1.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "image_picker_ios",
+      "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_ios-0.8.5+6",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "image_picker_platform_interface",
+      "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_platform_interface-2.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "intl",
       "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///Users/mac-david/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "lints",
@@ -296,7 +362,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-07-29T17:52:26.748665Z",
+  "generated": "2022-07-31T09:36:17.350252Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }
