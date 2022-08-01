@@ -1,4 +1,4 @@
-#Sun Jul 31 07:24:05 ART 2022
+#Mon Aug 01 15:11:37 ART 2022
 base.0=/Users/mac-david/UTEAM-APP/flutter-front/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
