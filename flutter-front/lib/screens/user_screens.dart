@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:app_uteam/models/user_model.dart';
+import 'package:app_uteam/providers/db_provider.dart';
+import 'package:app_uteam/providers/user_form_provider.dart';
+import 'package:app_uteam/providers/user_list_provider.dart';
+//import 'package:app_uteam/services/task_services.dart';
+import 'package:app_uteam/ui/input_decorations.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class UserScreen extends StatelessWidget {
   final options = const [
@@ -24,9 +32,15 @@ class UserScreen extends StatelessWidget {
           onTap: () {},
         ),
         separatorBuilder: (_, __) => const Divider(),
+        
       ),
 
-      
+      floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () => Navigator.pushNamed(context, 'UserPostScreen'),
+        )
     );
+    
   }
 }
+
