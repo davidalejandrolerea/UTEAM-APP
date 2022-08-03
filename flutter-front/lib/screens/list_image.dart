@@ -7,14 +7,13 @@ class ListImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Imagenes'),
-        ),
-        body: ListView.builder(
-            itemBuilder: (BuildContext context, int index) => ImageCard),
-        floatingActionButton: const FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {},
-        ));
+      appBar: AppBar(
+        title: const Text('Imagenes'),
+      ),
+      body: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (BuildContext context, int index) =>
+              Text('Item: $index')),
+    );
   }
 }
