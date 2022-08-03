@@ -1,3 +1,4 @@
+import 'package:app_uteam/widgets/image_card.dart';
 import 'package:flutter/material.dart';
 
 class ImageScreen extends StatelessWidget {
@@ -10,8 +11,12 @@ class ImageScreen extends StatelessWidget {
         title: const Text('Imagenes'),
       ),
       body: ListView.builder(
-          itemBuilder: (BuildContext context, int index) =>
-              Text('Item: $index')),
+        itemBuilder: (BuildContext context, int index) => ImageCard(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () => Navigator.pushNamed(context),
+      ),
     );
   }
 }

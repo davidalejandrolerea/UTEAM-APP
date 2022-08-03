@@ -1,5 +1,5 @@
+import 'package:app_uteam/widgets/image_card.dart';
 import 'package:flutter/material.dart';
-import '../widgets/image_card.dart';
 
 class ListImage extends StatelessWidget {
   const ListImage({Key? key}) : super(key: key);
@@ -13,7 +13,11 @@ class ListImage extends StatelessWidget {
       body: ListView.builder(
           itemCount: 10,
           itemBuilder: (BuildContext context, int index) =>
-              Text('Item: $index')),
+              ImageCard()),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
