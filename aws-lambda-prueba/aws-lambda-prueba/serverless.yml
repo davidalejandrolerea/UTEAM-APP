@@ -11,11 +11,8 @@ provider:
         - dynamodb:*
       Resource:
         - arn:aws:dynamodb:us-east-1:503235614140:table/TaskTable2
-    - Effect: Allow
-      Action:
-        - dynamodb:*
-      Resource:
         - arn:aws:dynamodb:us-east-1:503235614140:table/UserTable
+        
 functions:
   hello:
     handler: src/hello.hello
@@ -66,7 +63,7 @@ functions:
           path: /users
           method: get
   getUser:
-    handler: src/getUsers.getUser
+    handler: src/getUser.getUser
     events:
       - httpApi:
           path: /users/{id} 

@@ -12,10 +12,10 @@ const getUser = async (event) => {
     })
     .promise();
 
-  const task = result.Item
+  const user = result.Item
 
   return {
-    body: task,
+    body: user,
   };
 };
 

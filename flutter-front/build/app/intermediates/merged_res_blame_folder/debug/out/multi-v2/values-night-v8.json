@@ -1,17 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mac-david/UTEAM-APP/flutter-front/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "C:\\Users\\Micael\\Desktop\\Uteam\\flutterapp\\flutter_app_v2\\UTEAM-APP\\flutter-front\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/mac-david/UTEAM-APP/flutter-front/android/app/src/main/res/values-night/styles.xml",
+                    "source": "C:\\Users\\Micael\\Desktop\\Uteam\\flutterapp\\flutter_app_v2\\UTEAM-APP\\flutter-front\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
-                        "startOffsets": "172,817",
+                        "startOffsets": "175,831",
                         "endLines": "7,16",
                         "endColumns": "12,12",
-                        "endOffsets": "475,981"
+                        "endOffsets": "482,997"
                     },
                     "to": {
                         "startLines": "2,7",
