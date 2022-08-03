@@ -91,10 +91,9 @@ class _TaskPostScreenState extends State<TaskPostScreen> {
               taskListProvider.nuevaTask(
                   _tituloController.text, _descriptionController.text);
             }
-            taskServiceProvider.loadTasks();
-            Navigator.of(context).pop();
             taskServiceProvider.tasks = [];
             taskServiceProvider.loadTasks();
+            Navigator.of(context).pop();
           }),
     );
   }

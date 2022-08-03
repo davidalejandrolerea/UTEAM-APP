@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:app_uteam/models/models.dart';
 import 'package:app_uteam/models/task_model.dart';
+import 'package:app_uteam/models/user_model.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
@@ -35,6 +36,11 @@ class DBProvider {
                 title TEXT,
                 description TEXT
               )
+              CREATE TABLE Users (
+                id TEXT PRIMARY KEY,
+                username TEXT,
+                email TEXT
+              )
         ''');
     });
   }
@@ -48,11 +54,27 @@ class DBProvider {
     return res;
   }
 
+  Future<int> nuevoUser(UserModel nuevoUser) async {
+    final db = await database;
+    final res = await db!.insert('Users', nuevoUser.toJson(),
+        conflictAlgorithm: ConflictAlgorithm.replace);
+    print(res);
+    // Es el ID del último registro insertado;
+    return res;
+  }
+
   Future<TaskModel?> getTaskById(String id) async {
     final db = await database;
     final response = await db!.query('Tasks', where: 'id = ?', whereArgs: [id]);
 
     return response.isNotEmpty ? TaskModel.fromJson(response.first) : null;
+  }
+
+  Future<UserModel?> getUserById(String id) async {
+    final db = await database;
+    final response = await db!.query('Users', where: 'id = ?', whereArgs: [id]);
+
+    return response.isNotEmpty ? UserModel.fromJson(response.first) : null;
   }
 
   Future<List<TaskModel>> getTodasLasTasks() async {
@@ -62,6 +84,13 @@ class DBProvider {
     return res.isNotEmpty ? res.map((t) => TaskModel.fromJson(t)).toList() : [];
   }
 
+  Future<List<UserModel>> getTodosLosUsers() async {
+    final db = await database;
+    final res = await db!.query('Users');
+
+    return res.isNotEmpty ? res.map((t) => UserModel.fromJson(t)).toList() : [];
+  }
+
   Future<String?> updateTask(TaskModel nuevaTask) async {
     final db = await database;
     final res = await db!.update('Tasks', nuevaTask.toJson(),
@@ -69,9 +98,22 @@ class DBProvider {
     return res.toString();
   }
 
+  Future<String?> updateUser(UserModel nuevoUser) async {
+    final db = await database;
+    final res = await db!.update('Users', nuevoUser.toJson(),
+        where: 'id = ?', whereArgs: [nuevoUser.id]);
+    return res.toString();
+  }
+
   Future<int> deleteTask(String id) async {
     final db = await database;
     final res = await db!.delete('Tasks', where: 'id = ?', whereArgs: [id]);
+    return res;
+  }
+
+  Future<int> deleteUser(String id) async {
+    final db = await database;
+    final res = await db!.delete('Users', where: 'id = ?', whereArgs: [id]);
     return res;
   }
 

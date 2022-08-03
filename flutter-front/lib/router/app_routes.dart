@@ -1,6 +1,5 @@
 import 'package:app_uteam/models/models.dart';
 import 'package:app_uteam/pages/change_pages.dart';
-import 'package:app_uteam/screens/user_screens.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/screens.dart';
@@ -23,7 +22,7 @@ class AppRoutes {
         route: 'UserScreen',
         icon: Icons.supervised_user_circle_sharp,
         name: 'Usuarios UTEAM',
-        screen: const UserScreen()),
+        screen: UserScreen()),
     MenuOption(
         route: 'register',
         icon: Icons.app_registration,
@@ -45,10 +44,20 @@ class AppRoutes {
         name: 'Agregar Tareas',
         screen: const TaskPostScreen()),
     MenuOption(
+        route: 'usersPost',
+        icon: Icons.list_alt_outlined,
+        name: 'Agregar Usuarios',
+        screen: const UserPostScreen()),
+    MenuOption(
         route: 'taskPut',
         icon: Icons.edit,
         name: 'Editar Tareas',
         screen: const TaskPutScreen()),
+    MenuOption(
+        route: 'userPut',
+        icon: Icons.edit,
+        name: 'Editar Usuarios',
+        screen: const UserPutScreen()),
     MenuOption(
         route: 'home2',
         icon: Icons.app_registration,

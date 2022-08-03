@@ -8,6 +8,7 @@ import 'package:app_uteam/providers/task_list_provider.dart';
 import 'package:app_uteam/providers/user_list_provider.dart';
 import 'package:app_uteam/router/app_routes.dart';
 import 'package:app_uteam/services/task_services.dart';
+import 'package:app_uteam/services/user_services.dart';
 import 'package:app_uteam/themes/app_theme.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -24,8 +25,8 @@ class AppState extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => TaskService()),
         ChangeNotifierProvider(create: (_) => TaskListProvider()),
-        /* ChangeNotifierProvider(create: (_) => UserListProvider()), */
-      
+        ChangeNotifierProvider(create: (_) => UserListProvider()),
+        ChangeNotifierProvider(create: (_) => UserService()),
       ],
       child: const MyApp(),
     );
@@ -65,6 +66,3 @@ Future<Response> sendFile(String url, File file) async {
           ));
   return response;
 }
-
-
-

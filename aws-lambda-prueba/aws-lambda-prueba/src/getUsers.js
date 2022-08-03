@@ -6,10 +6,10 @@ const getUsers = async (event) => {
   const result = await dynamodb.scan({ 
     TableName: "UserTable" }).promise();
 
-  const tasks = result.Items;
+  const users= result.Items;
 
   return {
-      tasks,
+      users,
   };
 };
 

@@ -1,5 +1,4 @@
 import 'package:app_uteam/screens/screens.dart';
-import 'package:app_uteam/screens/user_screens.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -44,7 +43,7 @@ class _Paginas extends StatelessWidget {
       controller: navegacionModel.pageController,
       // physics: BouncingScrollPhysics(),
       physics: const NeverScrollableScrollPhysics(),
-      children: const [HomeScreen(), UserScreen()],
+      children: [HomeScreen(), UserScreen()],
     );
   }
 }

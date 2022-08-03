@@ -1,32 +1,32 @@
 import 'dart:convert';
 
 class User {
-  late String Nombre;
-  late String Email;
+  late String username;
+  late String email;
   late String id;
   User(
-    this.Nombre,
-    this.Email,
+    this.username,
+    this.email,
     this.id,
   );
   factory User.fromJson(String str) => User.fromMap(json.decode(str));
 
   String toJson() => json.encode(toMap());
   User.fromMap(Map<String, dynamic> map) {
-    Nombre = map['Nombre'];
-    Email = map['Email'];
+    username = map['username'];
+    email = map['email'];
     id = map['id'];
   }
 
   Map<String, dynamic> toMap() => {
-        "Nombre": Nombre,
-        "Email": Email,
+        "username": username,
+        "email": email,
         "id": id,
       };
 
   User copy() => User(
-        Nombre,
-        Email,
+        username,
+        email,
         id,
       );
 
