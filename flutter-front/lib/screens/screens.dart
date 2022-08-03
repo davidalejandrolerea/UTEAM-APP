@@ -6,3 +6,4 @@ export 'package:app_uteam/screens/team_screens.dart';
 export 'package:app_uteam/screens/register_screens.dart';
 export 'package:app_uteam/screens/login_screens.dart';
 export 'package:app_uteam/screens/user_screens.dart';
+export 'package:app_uteam/screens/image_screens.dart';

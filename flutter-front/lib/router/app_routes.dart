@@ -1,8 +1,7 @@
 import 'package:app_uteam/models/models.dart';
 import 'package:app_uteam/pages/change_pages.dart';
-import 'package:app_uteam/screens/user_screens.dart';
 import 'package:flutter/material.dart';
-
+import '../screens/list_image.dart';
 import '../screens/screens.dart';
 
 class AppRoutes {
@@ -24,6 +23,11 @@ class AppRoutes {
         icon: Icons.supervised_user_circle_sharp,
         name: 'Usuarios UTEAM',
         screen: const UserScreen()),
+    MenuOption(
+        route: 'ImageScreen',
+        icon: Icons.image,
+        name: 'Imagenes',
+        screen: const ListImage()),
     MenuOption(
         route: 'register',
         icon: Icons.app_registration,
