@@ -15,7 +15,7 @@ class ImageScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () => Navigator.pushNamed(context),
+        onPressed: () => Navigator.pushNamed(context, 'ImageCard')
       ),
     );
   }

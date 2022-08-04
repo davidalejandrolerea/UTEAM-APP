@@ -10,20 +10,42 @@ class ImageCard extends StatelessWidget {
           width: double.infinity,
           height: 400,
           decoration: _CardBorders(),
+          child: Stack(
+            children: [
+              _BlackgroundImage(),
+            ],
+          ),
         ));
   }
 
   BoxDecoration _CardBorders() => BoxDecoration(
-          color: Colors.red,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(25),
           boxShadow: [
             BoxShadow(
               color: Colors.black12,
-              blurRadius: 15.0,
+              blurRadius: 10,
               offset: Offset(
-                1.0, // horizontal, move right 10
-                5.0, // vertical, move down 10
-              ),
+                  0, // horizontal, move right 10
+                  7 // vertical, move down 10
+                  ),
             )
           ]);
+}
+
+class _BlackgroundImage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+        borderRadius: BorderRadius.circular(25),
+        child: Container(
+          width: double.infinity,
+          height: 400,
+          child: FadeInImage(
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            image: NetworkImage('https://via.placeholder.com/400x300/f6f6f6'),
+            fit: BoxFit.cover,
+          ),
+        ));
+  }
 }
