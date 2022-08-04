@@ -10,3 +10,4 @@ export 'package:app_uteam/screens/login_screens.dart';
 export 'package:app_uteam/screens/user_screens.dart';
 export 'package:app_uteam/screens/list_image.dart';
 export 'package:app_uteam/screens/loading_screen.dart';
+export 'package:app_uteam/screens/image_screens.dart';

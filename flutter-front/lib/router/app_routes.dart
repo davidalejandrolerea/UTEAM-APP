@@ -30,6 +30,11 @@ class AppRoutes {
         name: 'Imagenes',
         screen: const ListImage()),
     MenuOption(
+        route: 'imageScreen',
+        icon: Icons.image,
+        name: 'Pantalla de Imagenes',
+        screen: ImageScreen()),
+    MenuOption(
         route: 'register',
         icon: Icons.app_registration,
         name: 'Register Screen',
