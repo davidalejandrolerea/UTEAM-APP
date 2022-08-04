@@ -9,7 +9,21 @@ class ImageCard extends StatelessWidget {
           margin: EdgeInsets.only(top: 30, bottom: 50),
           width: double.infinity,
           height: 400,
-          color: Colors.red,
+          decoration: _CardBorders(),
         ));
   }
+
+  BoxDecoration _CardBorders() => BoxDecoration(
+          color: Colors.red,
+          borderRadius: BorderRadius.circular(25),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 15.0,
+              offset: Offset(
+                1.0, // horizontal, move right 10
+                5.0, // vertical, move down 10
+              ),
+            )
+          ]);
 }
