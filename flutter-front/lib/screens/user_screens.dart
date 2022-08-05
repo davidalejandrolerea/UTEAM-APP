@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:app_uteam/models/user_model.dart';
-import 'package:app_uteam/providers/db_provider.dart';
 import 'package:app_uteam/providers/user_form_provider.dart';
 import 'package:app_uteam/providers/user_list_provider.dart';
 import 'package:app_uteam/services/user_services.dart';
 import 'package:app_uteam/widgets/user_card.dart';
-import 'package:app_uteam/ui/input_decorations.dart';
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class UserScreen extends StatefulWidget {
@@ -70,7 +66,7 @@ class _UserScreenBodyState extends State<_UserScreenBody> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           onPressed: () => Navigator.pushNamed(context, 'usersPost'),
         ));
   }

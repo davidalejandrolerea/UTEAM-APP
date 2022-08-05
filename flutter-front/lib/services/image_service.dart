@@ -9,11 +9,11 @@ class ImageService extends ChangeNotifier {
   final List<Uteam123> image = [];
   bool isLoading = true;
   ImageService() {
-    this.loadImage();
+    loadImage();
   }
 
   Future<List<Uteam123>> loadImage() async {
-    this.isLoading = true;
+    isLoading = true;
     notifyListeners();
     final url = Uri.https(_baseUrl, 'image.json');
     final resp = await http.get(url);
@@ -22,10 +22,10 @@ class ImageService extends ChangeNotifier {
     imageMap.forEach((key, value) {
       final tempImage = Uteam123.fromMap(value);
       tempImage.id = key;
-      this.image.add(tempImage);
+      image.add(tempImage);
     });
-    this.isLoading = false;
+    isLoading = false;
     notifyListeners();
-    return this.image;
+    return image;
   }
 }
