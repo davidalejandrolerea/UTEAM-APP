@@ -1,0 +1,1 @@
+export 'package:app_uteam/services/image_service.dart';

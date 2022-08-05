@@ -28,7 +28,7 @@ class AppRoutes {
         route: 'ListImage',
         icon: Icons.image,
         name: 'Imagenes',
-        screen: const ListImage()),
+        screen: ListImage()),
     MenuOption(
         route: 'imageScreen',
         icon: Icons.image,

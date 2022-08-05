@@ -1,6 +1,11 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:app_uteam/models/image.dart' as img;
 import 'package:flutter/material.dart';
 
 class ImageCard extends StatelessWidget {
+  final Image images;
+  const ImageCard(Key? key, this.images, {required img.Uteam123 image}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(

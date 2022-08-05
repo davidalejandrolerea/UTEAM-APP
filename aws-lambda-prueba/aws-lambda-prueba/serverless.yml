@@ -9,9 +9,13 @@ provider:
     - Effect: Allow
       Action:
         - dynamodb:*
+        - awsS3
       Resource:
         - arn:aws:dynamodb:us-east-1:503235614140:table/TaskTable2
         - arn:aws:dynamodb:us-east-1:503235614140:table/UserTable
+        - arn:aws:dynamodb:us-east-1:503235614140:table/ImageTable
+        - arn:aws:s3:::imageflutter
+
         
 functions:
   hello:
@@ -50,6 +54,7 @@ functions:
        - httpApi:
            path: /tasks/{id}
            method: delete
+
   createUser:
     handler: src/addUser.addUser
     events:
@@ -104,3 +109,4 @@ resources:
         KeySchema:
           - AttributeName: id
             KeyType: HASH   
+   

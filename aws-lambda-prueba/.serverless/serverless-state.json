@@ -16,6 +16,7 @@
           ],
           "Resource": "arn:aws:dynamodb:us-east-1:503235614140:table/TaskTable2"
         }
+        
       ],
       "stage": "dev",
       "versionFunctions": true,

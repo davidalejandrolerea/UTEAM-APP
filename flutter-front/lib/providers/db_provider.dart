@@ -41,6 +41,11 @@ class DBProvider {
                 username TEXT,
                 email TEXT
               )
+              CREATE TABLE Image (
+                id TEXT PRIMARY KEY,
+                url TEXT
+               
+              )
         ''');
     });
   }
