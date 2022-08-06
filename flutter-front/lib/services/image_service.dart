@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 
 class ImageService extends ChangeNotifier {
   final String _baseUrl = '2qufsr9dx5.execute-api.us-east-1.amazonaws.com';
-  List<Image> users = [];
+  List<Image> image = [];
   late Image selectedImage;
   bool isLoading = true;
   bool isSaving = false;
@@ -25,7 +25,7 @@ class ImageService extends ChangeNotifier {
     final Map<String, dynamic> imageMap = jsonDecode(resp.body);
     final jsonData = jsonDecode(resp.body);
     for (var item in jsonData["images"]) {
-      image.add(image(item["link"], item["id"]));
+      image.add(Image(item["link"], item["id"]));
       // _dbProvider.getTodasLasTasks();
       _dbProvider.getImages(ImageModel(id: item["id"], link: item["link"]));
       // _dbProvider.getTodasLasTasks();
