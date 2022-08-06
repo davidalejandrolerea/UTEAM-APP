@@ -1,6 +1,6 @@
 const AWS = require("aws-sdk");
 
-const getImage = async (event) => {
+const getImages = async (event) => {
   const dynamodb = new AWS.DynamoDB.DocumentClient();
 
   const result = await dynamodb.scan({ 

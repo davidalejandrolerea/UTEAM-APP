@@ -28,7 +28,7 @@ functions:
     handler: src/getImages.getImages
     events:
       - httpApi:
-          path: /
+          path: /images
           method: get
   createTask:
     handler: src/addTask.addTask
@@ -115,4 +115,14 @@ resources:
         KeySchema:
           - AttributeName: id
             KeyType: HASH   
-   
+    ImageTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ImageTable
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH   

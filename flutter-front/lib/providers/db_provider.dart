@@ -43,7 +43,7 @@ class DBProvider {
               )
               CREATE TABLE Image (
                 id TEXT PRIMARY KEY,
-                url TEXT
+                link TEXT
                
               )
         ''');
@@ -53,6 +53,15 @@ class DBProvider {
   Future<int> nuevaTask(TaskModel nuevaTask) async {
     final db = await database;
     final res = await db!.insert('Tasks', nuevaTask.toJson(),
+        conflictAlgorithm: ConflictAlgorithm.replace);
+    print(res);
+    // Es el ID del último registro insertado;
+    return res;
+  }
+
+  Future<int> getImages(ImageModel linkImage) async {
+    final db = await database;
+    final res = await db!.insert('images', linkImage.toJson(),
         conflictAlgorithm: ConflictAlgorithm.replace);
     print(res);
     // Es el ID del último registro insertado;

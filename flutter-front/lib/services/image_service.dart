@@ -1,29 +1,36 @@
 import 'dart:convert';
+import 'dart:ui';
 import 'package:app_uteam/models/models.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:app_uteam/models/task_model.dart';
+import 'package:app_uteam/providers/db_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class ImageService extends ChangeNotifier {
-  final String _baseUrl = 'flutter-proyecto-daaf9-default-rtdb.firebaseio.com';
-  final List<Uteam123> image = [];
+  final String _baseUrl = '2qufsr9dx5.execute-api.us-east-1.amazonaws.com';
+  List<Image> users = [];
+  late Image selectedImage;
   bool isLoading = true;
+  bool isSaving = false;
+  late DBProvider _dbProvider;
   ImageService() {
+    _dbProvider = DBProvider();
     loadImage();
   }
 
-  Future<List<Uteam123>> loadImage() async {
+  Future<List<Image>> loadImage() async {
     isLoading = true;
-    notifyListeners();
-    final url = Uri.https(_baseUrl, 'image.json');
+    final url = Uri.https(_baseUrl, 'images');
     final resp = await http.get(url);
-    final Map<String, dynamic> imageMap = json.decode(resp.body);
+    final Map<String, dynamic> imageMap = jsonDecode(resp.body);
+    final jsonData = jsonDecode(resp.body);
+    for (var item in jsonData["images"]) {
+      image.add(image(item["link"], item["id"]));
+      // _dbProvider.getTodasLasTasks();
+      _dbProvider.getImages(ImageModel(id: item["id"], link: item["link"]));
+      // _dbProvider.getTodasLasTasks();
+    }
 
-    imageMap.forEach((key, value) {
-      final tempImage = Uteam123.fromMap(value);
-      tempImage.id = key;
-      image.add(tempImage);
-    });
     isLoading = false;
     notifyListeners();
     return image;
