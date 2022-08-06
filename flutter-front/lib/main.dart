@@ -1,4 +1,4 @@
-import 'package:app_uteam/services/image_service.dart';
+import 'package:app_uteam/services/image_services.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 import 'package:image_picker/image_picker.dart';
@@ -28,7 +28,7 @@ class AppState extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => TaskListProvider()),
         ChangeNotifierProvider(create: (_) => UserListProvider()),
         ChangeNotifierProvider(create: (_) => UserService()),
-        ChangeNotifierProvider(create: (_) => ImageService()),
+        ChangeNotifierProvider(create: (_) => ImageServices()),
       ],
       child: const MyApp(),
     );

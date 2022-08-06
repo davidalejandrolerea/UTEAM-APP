@@ -1,5 +1,5 @@
 import 'package:app_uteam/screens/loading_screen.dart';
-import 'package:app_uteam/services/image_service.dart';
+import 'package:app_uteam/services/image_services.dart';
 import 'package:app_uteam/widgets/image_card.dart';
 import 'package:flutter/material.dart';
 import 'package:app_uteam/router/app_routes.dart';
@@ -9,8 +9,8 @@ import 'package:provider/provider.dart';
 class ListImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final imageService = Provider.of<ImageService>(context);
-    if (imageService.isLoading) return LoadingScreen();
+    final imageServices = Provider.of<ImageServices>(context);
+    if (imageServices.isLoading) return LoadingScreen();
 
     return Scaffold(
         appBar: AppBar(

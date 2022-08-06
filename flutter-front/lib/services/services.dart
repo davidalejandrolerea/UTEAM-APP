@@ -1,1 +1,1 @@
-export 'package:app_uteam/services/image_service.dart';
+export 'package:app_uteam/services/image_services.dart';

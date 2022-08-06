@@ -6,21 +6,14 @@ ImageModel imageModelFromJson(String str) =>
 String imagerModelToJson(ImageModel data) => json.encode(data.toJson());
 
 class ImageModel {
-  ImageModel({
-    this.id,
-    this.link,
-  });
+  ImageModel({this.id, this.nombre, this.link});
 
   String? id;
+  String? nombre;
   String? link;
 
-  factory ImageModel.fromJson(Map<String, dynamic> json) => ImageModel(
-        id: json["id"],
-        link: json["link"],
-      );
+  factory ImageModel.fromJson(Map<String, dynamic> json) =>
+      ImageModel(id: json["id"], nombre: json["nombre"], link: json["link"]);
 
-  Map<String, dynamic> toJson() => {
-        "id": id,
-        "link": link,
-      };
+  Map<String, dynamic> toJson() => {"id": id, "nombre": nombre, "link": link};
 }

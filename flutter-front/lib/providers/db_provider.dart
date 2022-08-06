@@ -43,8 +43,8 @@ class DBProvider {
               )
               CREATE TABLE Image (
                 id TEXT PRIMARY KEY,
+                name TEXT,
                 link TEXT
-               
               )
         ''');
     });
@@ -61,7 +61,7 @@ class DBProvider {
 
   Future<int> getImages(ImageModel linkImage) async {
     final db = await database;
-    final res = await db!.insert('images', linkImage.toJson(),
+    final res = await db!.insert('Images', linkImage.toJson(),
         conflictAlgorithm: ConflictAlgorithm.replace);
     print(res);
     // Es el ID del último registro insertado;
