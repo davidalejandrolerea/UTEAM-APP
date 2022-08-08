@@ -3,13 +3,19 @@ const AWS = require("aws-sdk");
 const getImages = async (event) => {
   const dynamodb = new AWS.DynamoDB.DocumentClient();
 
-  const result = await dynamodb.scan({ 
-    TableName: "ImageTable" }).promise();
+  const { id } = event.pathParameters;
 
-  const images = result.Items;
+  const result = await dynamodb
+    .get({
+      TableName: "ImageTable",
+      Key: { id },
+    })
+    .promise();
+
+  const image = result.Item
 
   return {
-      images,
+    body: image,
   };
 };
 
