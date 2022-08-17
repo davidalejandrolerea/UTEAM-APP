@@ -19,17 +19,6 @@ class ImageServices extends ChangeNotifier {
 
   Future<List<Images>> loadImage() async {
     isLoading = true;
-    final url = Uri.https(_baseUrl, 'images');
-    final resp = await http.get(url);
-    final Map<String, dynamic> imageMap = jsonDecode(resp.body);
-    final jsonData = jsonDecode(resp.body);
-    for (var item in jsonData["images"]) {
-      image.add(Images(item["nombre"], item["link"], item["id"]));
-      // _dbProvider.getTodasLasTasks();
-      _dbProvider.getImages(ImageModel(
-          id: item["id"], nombre: item["nombre"], link: item["link"]));
-      // _dbProvider.getTodasLasTasks();
-    }
 
     isLoading = false;
     notifyListeners();

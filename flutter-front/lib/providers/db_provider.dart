@@ -23,7 +23,7 @@ class DBProvider {
   }
 
   Future<Database> initDB() async {
-    // Path de donde almacenaremos la base de datos
+    // Path de donde almacenaremos la base de datos de forma local en el dispositivo
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
     final path = join(documentsDirectory.path, 'TasksDB.db');
     print(path);
